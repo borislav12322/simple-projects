@@ -1,0 +1,27 @@
+.greetingBox {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border: 1px black solid;
+}
+button{
+
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.errorInput{
+    color: red;
+
+}
