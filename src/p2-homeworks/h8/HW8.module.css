@@ -1,0 +1,11 @@
+.peopleBox{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    width: 250px;
+}
+
+.peopleBox:not(:last-child){
+    margin-bottom: 5px;
+}
+
