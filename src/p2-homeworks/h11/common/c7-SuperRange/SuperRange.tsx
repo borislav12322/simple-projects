@@ -1,5 +1,7 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
 import s from './SuperRange.module.css'
+import Slider from "@mui/material/Slider";
+import {Box} from "@mui/material";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -8,6 +10,9 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
+    setValue: (value: number) => void
+    value1?: number
+    valueArr?: [number, number]
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -22,10 +27,18 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         onChange && onChange(e) // сохраняем старую функциональность
 
-        onChangeRange && onChangeRange(+e.currentTarget.value)
+        // onChangeRange && onChangeRange(+e.currentTarget.value)
+
+        restProps.setValue && restProps.setValue(e.currentTarget.valueAsNumber);
+
+        console.log(restProps.valueArr)
     }
 
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
+
+
+    const finalRangeClassName = `${s.range} ${className ? className : ''}`;
+
+
 
     return (
         <>
@@ -33,9 +46,12 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                 type={'range'}
                 onChange={onChangeCallback}
                 className={finalRangeClassName}
+                value={restProps.value1}
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
+
+
         </>
     )
 }

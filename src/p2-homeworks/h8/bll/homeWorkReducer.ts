@@ -1,35 +1,30 @@
 import {UserType} from "../HW8";
 
-type SortNameUpAC = {
+type SortNameUpACType = {
     type: 'sort'
     payload: 'up'
 }
-type SortNameDownAC = {
+type SortNameDownACType = {
     type: 'sort'
     payload: 'down'
 }
-type check18AgeAC = {
+type Check18AgeACType = {
     type: 'check'
     payload: 18
 }
 
-type ActionType = SortNameUpAC | SortNameDownAC | check18AgeAC
+type ActionType = SortNameUpACType | SortNameDownACType | Check18AgeACType
 
 export const homeWorkReducer = (state: Array<UserType>, action: ActionType): Array<UserType> => { // need to fix any
     switch (action.type) {
         case 'sort': {
-            if(action.payload === 'up'){
-                return [...state].sort((a, b) => b.name.localeCompare(a.name));
-
-            } else if(action.payload === 'down'){
-                return [...state].sort((a, b) => a.name.localeCompare(b.name));
-            }
+                const newList =  [...state].sort((a, b) => b.name.localeCompare(a.name));
+                return action.payload === 'up' ? newList : newList.reverse()
         }
         case 'check': {
-            if(action.payload === 18){
-                return state.filter(person => person.age >= 18)
-            }
+            return state.filter(person => person.age >= action.payload);
         }
-        default: return state
+        default:
+            return state
     }
 }
