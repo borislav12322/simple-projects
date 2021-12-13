@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/simple-projects/static/css/main.04b05171.chunk.css",
-    "main.js": "/simple-projects/static/js/main.7171b4e9.chunk.js",
-    "main.js.map": "/simple-projects/static/js/main.7171b4e9.chunk.js.map",
+    "main.js": "/simple-projects/static/js/main.e046b03d.chunk.js",
+    "main.js.map": "/simple-projects/static/js/main.e046b03d.chunk.js.map",
     "runtime-main.js": "/simple-projects/static/js/runtime-main.c142414b.js",
     "runtime-main.js.map": "/simple-projects/static/js/runtime-main.c142414b.js.map",
-    "static/js/2.e1c875a4.chunk.js": "/simple-projects/static/js/2.e1c875a4.chunk.js",
-    "static/js/2.e1c875a4.chunk.js.map": "/simple-projects/static/js/2.e1c875a4.chunk.js.map",
+    "static/js/2.8f7b6011.chunk.js": "/simple-projects/static/js/2.8f7b6011.chunk.js",
+    "static/js/2.8f7b6011.chunk.js.map": "/simple-projects/static/js/2.8f7b6011.chunk.js.map",
     "index.html": "/simple-projects/index.html",
     "static/css/main.04b05171.chunk.css.map": "/simple-projects/static/css/main.04b05171.chunk.css.map",
-    "static/js/2.e1c875a4.chunk.js.LICENSE.txt": "/simple-projects/static/js/2.e1c875a4.chunk.js.LICENSE.txt"
+    "static/js/2.8f7b6011.chunk.js.LICENSE.txt": "/simple-projects/static/js/2.8f7b6011.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c142414b.js",
-    "static/js/2.e1c875a4.chunk.js",
+    "static/js/2.8f7b6011.chunk.js",
     "static/css/main.04b05171.chunk.css",
-    "static/js/main.7171b4e9.chunk.js"
+    "static/js/main.e046b03d.chunk.js"
   ]
 }
